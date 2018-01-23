@@ -151,6 +151,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-tmux-use" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/23/tmux-use/">tmux使用</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/23/tmux-use/" class="archive-article-date">
+  	<time datetime="2018-01-23T08:45:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1)安装 yum install tmux -y</p>
+<p>2)新建一个叫做”sesaing”的会话(或者直接tmux运行但会使用默认的会话名称)，并且运行top命令</p>
+<p>tmux new -s sesaing<br>top</p>
+<p>3)然后输入CTRL+b d从此会话脱离(这操作类似把tmux会话挂到后台，但外面的用户退出登陆等都不会kill这个会话)<br>想要重新连接此会话，需输入：</p>
+<p>tmux attach-session -t sesaing</p>
+<p>之后你会看到top操作仍然运行在重新连接的会话上。</p>
+<p>4)一些管理sessions的命令：<br>tmux list-session<br>tmux new-session -s &lt;会话名&gt;<br>tmux attach-session -t &lt;会话名&gt;<br>tmux rename-session -t &lt;会话名&gt;<br>tmux choose-session -t &lt;会话名&gt;<br>tmux kill-session -t &lt;会话名&gt;         #要真正关闭一个session，可以在终端下执行命令 tmux kill-session -t basic ，其中-t参数表示session名称</p>
+<p>5）进入tmux面板后，一定要先按ctrl+b，然后松开，再按其他的组合键才生效。</p>
+<p>6）常用到的几个组合键：<br>ctrl+b ?            显示快捷键帮助<br>ctrl+b 空格键       采用下一个内置布局，这个很有意思，在多屏时，用这个就会将多有屏幕竖着展示<br>ctrl+b !            把当前窗口变为新窗口<br>ctrl+b  “           模向分隔窗口（属于创建pane）<br>ctrl+b %            纵向分隔窗口（属于创建pane）<br>ctrl+b q            显示分隔窗口的编号<br>ctrl+b o            跳到下一个分隔窗口。多屏之间的切换<br>ctrl+b 上下键      上一个及下一个分隔窗口<br>ctrl+b C-方向键    调整分隔窗口大小<br>ctrl+b &amp;           确认后退出当前tmux<br>ctrl+b [           复制模式，即将当前屏幕移到上一个的位置上，其他所有窗口都向前移动一个。<br>ctrl+b c           创建新窗口<br>ctrl+b n           选择下一个窗口<br>ctrl+b l           最后使用的窗口<br>ctrl+b p           选择前一个窗口<br>ctrl+b w           以菜单方式显示及选择窗口<br>ctrl+b s           以菜单方式显示和选择会话。这个常用到，可以选择进入哪个tmux<br>ctrl+b t           显示时钟。然后按enter键后就会恢复到shell终端状态<br>ctrl+b d           脱离当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/23/tmux-use/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
